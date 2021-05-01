@@ -1,3 +1,4 @@
 /node_modules
 /lib/extract/000
 /lib/extract/001
+*.log
