@@ -23,8 +23,9 @@ async function start() {
     // verificar ja traduzidas
     // e traduzilas talvez usando o rabbit
     // gerar arquvios .lua para o addon    
-    
-    
+
+
+
     // TODO
     // criar arquivo do docker para traducao solo
 }

@@ -35,9 +35,9 @@ const amount = null || toTranslate.length;
 
 const dialogs = toTranslate.slice(referential, referential + amount);
 
-console.log(dialogs);
-/*
+/**/
 function translateDialog(dialog) {
+
   return new Promise(resolve => {
     // console.log(dialog.Text);
     const arrayOfStrings = dialog.Text.split(/\\n\\n|\\n/).map((string, i) => {
@@ -74,8 +74,13 @@ const eta = makeEta({ min: count, max: toTranslate.length });
 eta.start();
 
 result.subscribe(dialog => {
-  if (dialog.Success) translated.push(dialog);
-  if (dialog.code == 429) exitProgram();
+  if (dialog.Success) {
+    translated.push(dialog);
+  }
+
+  if (dialog.code == 429) {
+    exitProgram();
+  }
 
   const percentage = ((translated.length / array.length) * 100).toFixed(2);
   eta.report(count + 1);

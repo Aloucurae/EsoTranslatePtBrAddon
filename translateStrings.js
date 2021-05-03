@@ -34,14 +34,18 @@ function translateString({ i, string }) {
   let detokenizedString = detokenizedString0;
 
   return new Promise(resolve => {
+
     if (detokenizedString.includes("|")) {
       resolve({ i, string: detokenizedString });
     }
+
     let factors = [];
+
     if (detokenizedString.includes("^")) {
       factors = detokenizedString.split('^');
       detokenizedString = factors[0];
     }
+
     translate(
       detokenizedString,
       { from: "en", to: "pt", raw: true }
