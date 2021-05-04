@@ -91,7 +91,7 @@ result.subscribe(dialog => {
     } restantes - Aprox. ${(eta.estimate() / 60 / 60).toFixed(
       1
     )}hrs restantes.\r`
-  );
+  );  
 
 });
 
